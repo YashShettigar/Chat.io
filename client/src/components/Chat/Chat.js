@@ -20,7 +20,7 @@ export default ({location}) => {
     const [room, setRoom] = useState('')
     const [message, setMessage] = useState('')
     const [messages, setMessages] = useState([])
-    const [usersInRoom, setUsersInRoom] = useState([])
+    const [users, setUsers] = useState([])
 
     const ENDPOINT = 'localhost:5000'
 
@@ -32,32 +32,32 @@ export default ({location}) => {
         setName(name)
         setRoom(room)
 
-        socket.emit('join', { name, room }, () => {})
+        socket.emit('JOIN', { name, room }, () => {})
 
         return () => {
-            socket.emit('disconnect')
+            socket.emit('DISCONNECT')
             socket.off()
         }
 
     }, [ENDPOINT, location.search])
 
     useEffect(() => {
-        socket.on('message', (message) => {
+        socket.on('MESSAGE', (message) => {
             setMessages([...messages, message])
         })
     }, [messages])
 
     useEffect(() => {
-        socket.on('users', ({ users }) => {
-            setUsersInRoom(users)
-        })
-    }, [usersInRoom])
+        socket.on("ROOM_DATA", ({ users }) => {
+            setUsers(users);
+        });
+    }, [])
 
     const sendMessage = (e) => {
         e.preventDefault()
 
         if (message) {
-            socket.emit('sendMessage', message, () => setMessage(''))
+            socket.emit('SEND_MSG', message, () => setMessage(''))
         }
     }
 
@@ -70,7 +70,7 @@ export default ({location}) => {
             <div className="chat-window-container">
                 <div className="left-chat-window-container">
                     <Room 
-                        users={usersInRoom}
+                        users={users}
                     />
                 </div>
                 <div className="right-chat-window-container">
