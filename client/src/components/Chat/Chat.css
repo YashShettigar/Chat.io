@@ -1,0 +1,28 @@
+.chat-window {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e5e5;
+}
+
+.chat-window-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 180px);
+}
+
+.right-chat-window-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    min-height: calc(100vh - 180px);
+}
+
+.left-chat-window-container {
+    width: 20%;
+    min-height: calc(100vh - 180px);
+    margin-left: 5px;
+}

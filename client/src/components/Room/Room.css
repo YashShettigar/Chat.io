@@ -1,0 +1,21 @@
+.member-container {
+    width: 90%;
+    height: 100%;
+    margin-left: 10px;
+    background-color: #2d4059;
+    border-radius: 10px
+}
+
+.name-container {
+    margin: 10px;
+    word-wrap: break-word;
+    min-height: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f3f1;
+    border-radius: 4px;
+    padding: 4px 10px;
+    color: #2d4059;
+    font-family: 'Acme', sans-serif;
+}

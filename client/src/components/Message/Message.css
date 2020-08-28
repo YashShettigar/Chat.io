@@ -1,0 +1,37 @@
+.message-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f3f1;
+    color: #000;
+    margin: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 2px #bfbfbf;
+    min-height: 60px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+p {
+    max-width: 100%;
+    height: 20px;
+    font-size: 16px;
+    padding: 4px 10px;
+}
+
+.text-box {
+    margin: 0 5px;
+    max-width: 100%;
+    min-height: 40px;
+    background-color: #f5f3f1;
+    word-wrap: break-word;
+    color: #000;
+    padding: 6px 4px;
+    flex-wrap: wrap;
+    font-weight: 600
+} 
+
+.writer {
+    background-color: #ea5455;
+    color: #f5f3f1;
+    padding: 4px 7px;
+}

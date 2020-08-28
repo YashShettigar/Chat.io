@@ -1,0 +1,7 @@
+.message-window {
+    width: calc(100% - 10px);
+    height: calc(100vh - 195px);
+    background-color: #decdc3;
+    border-radius: 10px;
+    margin-top: 5px;
+}

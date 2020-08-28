@@ -1,0 +1,42 @@
+.row-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.join-label {
+    width: 110px;
+    height: 55px;
+    font-size: 28px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    color: #ea5455;
+    font-weight: 600;
+    justify-content: center;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+.join-input {
+    height: 50px;
+    font-size: 24px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    border: 2px solid #ea5455;
+    background-color: #decdc3;
+    border-radius: 8px;
+    color: #ea5455
+}
+
+.join-input:focus {
+    color: #ea5455;
+    border: none;
+    border: 2px solid #ea5455;
+    border-radius: 3px;
+    background-color: #f0ecea;
+}
+
+.join-input::placeholder {
+    color: #f0ecea
+}
